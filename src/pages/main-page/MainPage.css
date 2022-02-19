@@ -1,0 +1,26 @@
+.big-text-body {
+    max-width: 80%;
+}
+
+.button-main-page {
+    padding: 1rem 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: transparent;
+    border-radius: 1.6rem;
+    border: 0.2rem solid black;
+}
+
+.button-main-page:hover {
+    background-color: pink;
+    transition: background-color 1s;
+}
+
+.section-welcome {
+    justify-content: space-evenly;
+}
+
+.section-welcome-continue-container h5 {
+    margin-bottom: 2rem;
+}
