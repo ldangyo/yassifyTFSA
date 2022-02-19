@@ -1,5 +1,6 @@
 import "./MainPage.css";
 import "../../App.css";
+import "../../normalize.css";
 import React, { useState, useRef, useEffect } from "react";
 import { SavingsAccountPage } from "../savings-account-page/SavingsAccountPage";
 
@@ -13,7 +14,8 @@ export const MainPage = () => {
     }
 
     useEffect(() => {
-        if (showSavingsSection) handleBackClick();
+        handleBackClick();
+        console.log("changed", showSavingsSection);
     }, [showSavingsSection]);
 
     return (
@@ -36,7 +38,7 @@ export const MainPage = () => {
                     <h5>you ready to start your TFSA adventure?</h5>
                     <button
                         className="button-main-page"
-                        onClick={() => {
+                        onClick={async () => {
                             setShowSavingsSection(true);
                             handleBackClick();
                         }}
