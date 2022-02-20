@@ -6,11 +6,12 @@ import { SavingsAccountPage } from "../savings-account-page/SavingsAccountPage";
 import { IndividualPage } from "../individual-page/IndividualPage";
 import { TfsaInfoPage } from "../tfsa-info-page/TfsaInfoPage";
 import { TfsaTypes } from "../tfsa-types/TfsaTypes";
+import { MutualFundsPage } from "../mutual-funds-page/MutualFundsPage";
 
 export const MainPage = () => {
     const [showSavingsSection, setShowSavingsSection] = useState(false);
     const [showTfsaInfoSection, setShowTfsaInfoSection] = useState(false);
-    const [showTfsaTypeSection, setShowTfsaTypeSection] =useState(false)
+    const [showMutualFundsPage, setShowMutualFundsPage] = useState(false);
     const [dreamItem, setDreamItem] = useState();
     const [years, setYears] = useState();
     const [amount, setAmount] = useState();
@@ -93,6 +94,8 @@ export const MainPage = () => {
 
             <IndividualPage></IndividualPage>
             <TfsaTypes></TfsaTypes>
+            {/* {showMutualFundsPage && <MutualFundsPage />} */}
+            <MutualFundsPage ref={tfsaInfoRef} />
         </div>
     );
 };
