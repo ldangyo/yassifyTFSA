@@ -1,10 +1,26 @@
 .individualTypes{
-    margin-top: 5rem;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    
+}
+
+#kids{
+    flex: 1;
 }
 #title{
-    margin-bottom: 5rem;
+   margin-bottom: 2rem;
 }
+#subtext{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.individualOptions{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem; 
+    
+}
+
+

@@ -12,47 +12,57 @@ export const IndividualPage = () => {
         <div>
              <section>
                 
-                <h2 id="title">Individual stocks, bonds, ETFs and more</h2>
-                    <h3>choose companies and etfs and bonds you think are gonna do highkey well in the market</h3>
+                <h3 id="title">Individual stocks, bonds, ETFs and more</h3>
+                    <h3 id="subtext">choose companies, etfs and bonds you think are gonna do highkey well in the market</h3>
                     <div className="individualTypes">
-                        <div>
-                            <h3>ETF's</h3>
+                        <div id="kids">
+                            <h3 >ETF's</h3>
                             <h5>
                                 Think of it like a basket of companies you can invest in all at once. There are different types of baskets that you can choose from
                             </h5>
 
                         </div>
-                        <div>
-                            <h3>Stonks</h3>
+                        <div id="kids">
+                            <h3 >Stonks</h3>
                             <h5>
                                 A stonk is a small investment you placed in a company to get a fraction of ownership in it
                             </h5>
                         </div>
-                        <div>
-                            <h3>Bonds</h3>
+                        <div id="kids">
+                            <h3 >Bonds</h3>
+                            <h5>
+                                A bond is a loan taken out by the company and instead of going to the bank the company gets its loan from investors and the investors charge an interest that the company must pay.
+                            </h5>
                         </div>
                         
                     </div>
 
             </section>
             <section>
-            <div className="individualOptions">
-                    <div className="options">
-                        <h3>VFV</h3>
-                        <h5>
-                            Contains the top 500 companies from the US
-                        </h5>
-
-                    </div>
-                    <div className="options">
-                        <h3>CIC</h3>
-                        <h5>
-                            Contains a handful of canadian owned banks
-                        </h5>
-                    </div>
+                <h3 id="subtext">Choose your own ETF, Stock and Bond!</h3>
+                <div className="individualOptions">
+                        
+                        <button>
+                            <h3>VFV</h3>
+                            <h5>
+                                Contains the top 500 companies from the US
+                            </h5>
+                        </button>
+                        
+                        <button>HSBC</button>
+                        <button>bond 1</button>
+                        <button>
+                            <h3>CIC</h3>
+                            <h5>
+                                Contains a handful of canadian owned banks
+                            </h5>
+                        </button>
+                        
+                        <button>Starbucks</button>
                     
-                    
-                </div>
+                        <button>bond 2</button>
+                        
+                    </div>
             </section>
             
         </div>
