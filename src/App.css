@@ -45,7 +45,7 @@ section {
 
 .container {
     scroll-snap-type: y mandatory;
-    height: 100vh;
+    height: 100%;
 }
 
 .big-text-body {
