@@ -35,7 +35,7 @@ export const IndividualPage = () => {
     
 
     return(
-        <div>
+        <div className="container">
              <section>
                 
                 <h3 id="title">Individual stocks, bonds, ETFs and more</h3>
@@ -89,10 +89,7 @@ export const IndividualPage = () => {
                         <button className={bond2? "buttonTrue":"buttonFalse"} onClick={handlebond2}>bond 2</button>
                         
                     </div>
-            </section>
-
-            <section>
-                
+                    <button>Done</button>
             </section>
             
         </div>

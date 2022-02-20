@@ -19,9 +19,20 @@ export const TfsaInfoPage = forwardRef(({ onBackClick }, ref) => {
                     </h5>
                 </div>
                 <div>
-                    <h3>✨Know the limits, play within it✨</h3>
-                    <h5 className="big-text-body">yeet</h5>
+                    <h3 className="title">✨Know the limits, play within it✨</h3>
+                    <h5 className="big-text-body">
+                    There are government-mandated limits to how much you can contribute every year. 
+                    These limits accumulate from the moment you turn 18. Make sure you invest within these limits.
+                    </h5>
                 </div>
+
+                <button
+                        className="button"
+                        style={{ marginTop: "2rem" }}
+                        onClick={() => onClickNext("tfsaInfoSection")}
+                    >
+                        OK BET
+                </button>
             </section>
         </div>
     );

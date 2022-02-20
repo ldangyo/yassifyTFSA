@@ -1,12 +1,12 @@
-.big-text-body{
-    max-width: 100%;
-}
-
-.title{
-    margin-top: 3rem;
-}
-
-.button {
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    }
+    
+button {
     padding: 1rem 3rem;
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -16,7 +16,12 @@
     border: 0.2rem solid black;
 }
 
-.button:hover {
+button:hover {
     background-color: pink;
     transition: background-color 1s;
+}
+
+
+.title{
+    margin-bottom: 5rem;
 }

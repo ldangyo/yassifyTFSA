@@ -5,10 +5,12 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import { SavingsAccountPage } from "../savings-account-page/SavingsAccountPage";
 import { IndividualPage } from "../individual-page/IndividualPage";
 import { TfsaInfoPage } from "../tfsa-info-page/TfsaInfoPage";
+import { TfsaTypes } from "../tfsa-types/TfsaTypes";
 
 export const MainPage = () => {
     const [showSavingsSection, setShowSavingsSection] = useState(false);
     const [showTfsaInfoSection, setShowTfsaInfoSection] = useState(false);
+    const [showTfsaTypeSection, setShowTfsaTypeSection] =useState(false)
     const [dreamItem, setDreamItem] = useState();
     const [years, setYears] = useState();
     const [amount, setAmount] = useState();
@@ -88,6 +90,9 @@ export const MainPage = () => {
                     onClickNext={() => onClickNext}
                 />
             )}
+
+            <IndividualPage></IndividualPage>
+            <TfsaTypes></TfsaTypes>
         </div>
     );
 };
