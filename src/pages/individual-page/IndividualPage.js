@@ -6,7 +6,33 @@ import React, { useState, useRef, useEffect } from "react";
 
 
 export const IndividualPage = () => {
+    const [vfv, setvfv]=useState(false)
+    const [cic, setCic] =useState(false)
+    const [hsbc, setHsbc] =useState(false)
+    const [starbucks, setStarbucks] =useState(false)
+    const [bond1, setBond1] =useState(false)
+    const [bond2, setBond2] =useState(false)
 
+    const handlevfv = ()=>{
+        setvfv(!vfv)
+    } 
+    const handlecic = ()=>{
+        setCic(!cic)
+    } 
+    const handlehsbc = ()=>{
+        setHsbc(!hsbc)
+    } 
+    const handlestarbucks = ()=>{
+        setStarbucks(!starbucks)
+    } 
+    const handlebond1 = ()=>{
+        setBond1(!bond1)
+    } 
+    const handlebond2 = ()=>{
+        setBond2(!bond2)
+    } 
+
+    
 
     return(
         <div>
@@ -42,27 +68,31 @@ export const IndividualPage = () => {
                 <h3 id="subtext">Choose your own ETF, Stock and Bond!</h3>
                 <div className="individualOptions">
                         
-                        <button>
+                        <button className={vfv? "buttonTrue":"buttonFalse"} onClick={handlevfv}>
                             <h3>VFV</h3>
                             <h5>
                                 Contains the top 500 companies from the US
                             </h5>
                         </button>
                         
-                        <button>HSBC</button>
-                        <button>bond 1</button>
-                        <button>
+                        <button className={hsbc? "buttonTrue":"buttonFalse"} onClick={handlehsbc}>HSBC</button>
+                        <button className={bond1? "buttonTrue":"buttonFalse"} onClick={handlebond1}>bond 1</button>
+                        <button className={cic? "buttonTrue":"buttonFalse"} onClick={handlecic}>
                             <h3>CIC</h3>
                             <h5>
                                 Contains a handful of canadian owned banks
                             </h5>
                         </button>
                         
-                        <button>Starbucks</button>
+                        <button className={starbucks? "buttonTrue":"buttonFalse"} onClick={handlestarbucks}>Starbucks</button>
                     
-                        <button>bond 2</button>
+                        <button className={bond2? "buttonTrue":"buttonFalse"} onClick={handlebond2}>bond 2</button>
                         
                     </div>
+            </section>
+
+            <section>
+                
             </section>
             
         </div>

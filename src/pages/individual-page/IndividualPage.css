@@ -14,13 +14,51 @@
 }
 
 .individualOptions{
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem; 
-    
+
 }
+
+.buttonFalse {
+	background-color:transparent;
+	border-radius:28px;
+	border:2px solid #424242;
+	display:inline-block;
+	cursor:pointer;
+	color:#383838;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.buttonTrue {
+	background-color:transparent;
+	border-radius:28px;
+	border:4px solid #424242;
+	display:inline-block;
+	cursor:pointer;
+	color:#383838;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.buttonFalse:hover {
+	background-color:transparent;
+    border:4px solid #424242;
+}
+
+.buttonTrue:hover {
+	background-color:transparent;
+    border:2px solid #424242;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
 
 
