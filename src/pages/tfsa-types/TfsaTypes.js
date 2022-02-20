@@ -9,10 +9,10 @@ export const TfsaTypes = (()=>{
             <section>
                 <h2 className="title">💰TFSA Types you can Finesse💰</h2>
                 <div className="options">
-                    <button>Mutual Funds</button>
-                    <button>DIY Stonks</button>
-                    <button>GIC</button>
-                    <button>HSBC Managed Solutions</button>
+                    <button className="button">Mutual Funds</button>
+                    <button className="button">DIY Stonks</button>
+                    <button className="button">GIC</button>
+                    <button className="button">HSBC Managed Solutions</button>
 
                 </div>
             </section>
