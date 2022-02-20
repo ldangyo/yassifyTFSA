@@ -41,15 +41,24 @@
 .buttonTrue:hover {
     border: 0.5rem solid black;
 	background-color: transparent;
+    transition: 1s;
 }
 
 .buttonFalse:hover {
-    border: 0.5rem solid black;
-	background-color: transparent;
+    cursor: pointer;
 }
 
 .buttonTrue{
 	padding: 1rem 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: gray;
+    border-radius: 1.6rem;
+    border: 0.5rem solid black;
+}
+.buttonTrue:active{
+    padding: 1rem 3rem;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 2rem;
