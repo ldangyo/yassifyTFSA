@@ -12,8 +12,84 @@
 .images-wrapper img {
     width: 100%;
     height: auto;
+    border: transparent solid 0.5rem;
+}
+
+img.selected {
+    border: orange solid 0.5rem;
+}
+
+.image-container {
+    background-color: transparent;
+    border: none;
+    cursor: grab;
 }
 
 .title {
     margin-bottom: 2rem;
+}
+
+section#section-amount {
+    justify-content: flex-start;
+}
+
+.input-container {
+    display: flex;
+    margin: 3rem 0;
+}
+
+.input-container input {
+    text-align: center;
+}
+
+.button {
+    padding: 1rem 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: transparent;
+    border-radius: 1.6rem;
+    border: 0.2rem solid black;
+}
+
+.button:hover {
+    background-color: pink;
+    transition: background-color 1s;
+}
+
+.valuePadding {
+    border: 1px inset #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+}
+.valuePadding input {
+    border: none;
+    padding: 0px;
+    outline: none;
+}
+
+.sub-text {
+    font-size: 1.4rem;
+}
+
+.sub-heading {
+    font-size: 1.8rem;
+}
+
+.sub-text-container {
+    text-align: left;
+    width: 44%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-text {
+    margin-top: 3rem;
 }
