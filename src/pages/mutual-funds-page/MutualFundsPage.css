@@ -1,0 +1,58 @@
+.info-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.asset-type-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.asset-type-box {
+    flex: 1;
+    border: black 0.2rem solid;
+    border-radius: 1.7rem;
+    margin: 1rem;
+    padding: 2rem;
+    max-width: 17rem;
+    cursor: grab;
+}
+
+.asset-type-box:hover {
+    background-color: pink;
+}
+
+.risk-buttons {
+    display: flex;
+    border: 0.2rem black solid;
+    border-radius: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.risk-button-item {
+    padding: 1rem;
+    margin: 0;
+    flex: 1;
+}
+
+.risk-button-item:hover {
+    background-color: pink;
+}
+
+.risk-buttons > :first-child {
+    border-top-left-radius: 1.4rem;
+    border-bottom-left-radius: 1.4rem;
+}
+
+.risk-buttons > :last-child {
+    border-top-right-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+}
+
+.selected {
+    background-color: pink;
+}

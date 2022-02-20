@@ -4,10 +4,12 @@ import "../../normalize.css";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { SavingsAccountPage } from "../savings-account-page/SavingsAccountPage";
 import { TfsaInfoPage } from "../tfsa-info-page/TfsaInfoPage";
+import { MutualFundsPage } from "../mutual-funds-page/MutualFundsPage";
 
 export const MainPage = () => {
     const [showSavingsSection, setShowSavingsSection] = useState(false);
     const [showTfsaInfoSection, setShowTfsaInfoSection] = useState(false);
+    const [showMutualFundsPage, setShowMutualFundsPage] = useState(false);
     const [dreamItem, setDreamItem] = useState();
     const [years, setYears] = useState();
     const [amount, setAmount] = useState();
@@ -87,6 +89,9 @@ export const MainPage = () => {
                     onClickNext={() => onClickNext}
                 />
             )}
+
+            {/* {showMutualFundsPage && <MutualFundsPage />} */}
+            <MutualFundsPage ref={tfsaInfoRef} />
         </div>
     );
 };
