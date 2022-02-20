@@ -1,4 +1,5 @@
 import "./SavingsAccountPage.css";
+import "../individual-page/IndividualPage.css"
 import "../../App.css";
 import React, { forwardRef, useRef } from "react";
 import Car from "../../assets/car.png";
@@ -27,6 +28,10 @@ export const SavingsAccountPage = forwardRef(({ onBackClick }, ref) => {
                     </div>
                 </div>
             </section>
+
+           
+
+            
         </div>
     );
 });

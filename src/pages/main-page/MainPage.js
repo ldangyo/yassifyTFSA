@@ -3,6 +3,7 @@ import "../../App.css";
 import "../../normalize.css";
 import React, { useState, useRef, useEffect } from "react";
 import { SavingsAccountPage } from "../savings-account-page/SavingsAccountPage";
+import { IndividualPage } from "../individual-page/IndividualPage";
 
 export const MainPage = () => {
     const [showSavingsSection, setShowSavingsSection] = useState(false);
@@ -47,6 +48,9 @@ export const MainPage = () => {
                     </button>
                 </div>
             </section>
+            
+            <IndividualPage></IndividualPage> 
+           
             {showSavingsSection && (
                 <section>
                     <SavingsAccountPage ref={savingsPageRef} />

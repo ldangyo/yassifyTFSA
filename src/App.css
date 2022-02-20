@@ -8,6 +8,8 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    background: rgb(246,196,150);
+    background: linear-gradient(40deg, rgba(246,196,150,1) 0%, rgba(255,242,197,1) 48%, rgba(249,244,234,1) 100%); 
 }
 
 main {
