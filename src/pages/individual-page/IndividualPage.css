@@ -1,31 +1,30 @@
-.container{
-	margin-left: 1rem;
-	margin-right: 1rem;
+.container {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-.individualTypes{
+.individualTypes {
     display: flex;
 }
 
-#kids{
+#kids {
     flex: 1;
 }
-#title{
-   margin-bottom: 2rem;
+#title {
+    margin-bottom: 2rem;
 }
-#subtext{
+#subtext {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-.individualOptions{
+.individualOptions {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2rem;
-    grid-row-gap: 2rem; 
-
+    grid-row-gap: 2rem;
 }
 
 .buttonFalse {
@@ -40,7 +39,7 @@
 
 .buttonTrue:hover {
     border: 0.5rem solid black;
-	background-color: transparent;
+    background-color: transparent;
     transition: 1s;
 }
 
@@ -48,8 +47,8 @@
     cursor: pointer;
 }
 
-.buttonTrue{
-	padding: 1rem 3rem;
+.buttonTrue {
+    padding: 1rem 3rem;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 2rem;
@@ -57,7 +56,7 @@
     border-radius: 1.6rem;
     border: 0.5rem solid black;
 }
-.buttonTrue:active{
+.buttonTrue:active {
     padding: 1rem 3rem;
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -104,5 +103,18 @@ button:active {
 	top:1px;
 } */
 
+.button {
+    padding: 1rem 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: transparent;
+    border-radius: 1.6rem;
+    border: 0.2rem solid black;
+    margin: 0.5rem;
+}
 
-
+.button:hover {
+    background-color: pink;
+    transition: background-color 1s;
+}

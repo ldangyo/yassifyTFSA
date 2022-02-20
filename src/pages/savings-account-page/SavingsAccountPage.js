@@ -1,5 +1,5 @@
 import "./SavingsAccountPage.css";
-import "../individual-page/IndividualPage.css"
+import "../individual-page/IndividualPage.css";
 import "../../App.css";
 import React, { forwardRef, useRef, useState, useEffect } from "react";
 import Car from "../../assets/car.png";
@@ -10,6 +10,7 @@ export const SavingsAccountPage = forwardRef(
     ({ onClickNext, dreamItem, setDreamItem, setAmount, setYears }, ref) => {
         const [interest, setInterest] = useState(0.5);
         const amountRef = useRef();
+        const interestRef = useRef();
         const tfsaInfoRef = useRef();
 
         return (
@@ -127,9 +128,20 @@ export const SavingsAccountPage = forwardRef(
                         If you're looking to keep your money long term, you
                         gotta make some new moves.
                     </h5>
+                    <button
+                        className="button"
+                        style={{ marginTop: "2rem" }}
+                        onClick={() =>
+                            interestRef.current.scrollIntoView({
+                                behavior: "smooth",
+                            })
+                        }
+                    >
+                        OK BET
+                    </button>
                 </section>
                 <section>
-                    <h3 className="title">
+                    <h3 ref={interestRef}>
                         Checkout your money in a savings account
                     </h3>
                     <div className="input-container">

@@ -63,6 +63,7 @@ section#section-amount {
     justify-content: center;
     align-items: center;
     width: 7rem;
+    background-color: white;
 }
 .valuePadding input {
     border: none;

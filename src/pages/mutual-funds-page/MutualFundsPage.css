@@ -56,3 +56,25 @@
 .selected {
     background-color: pink;
 }
+
+.imagez-container {
+    background-color: white;
+    border: 0.2rem black solid;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.button {
+    padding: 1rem 3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: transparent;
+    border-radius: 1.6rem;
+    border: 0.2rem solid black;
+}
+
+.button:hover {
+    background-color: pink;
+    transition: background-color 1s;
+}

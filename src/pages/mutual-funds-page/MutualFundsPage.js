@@ -11,12 +11,16 @@ export const MutualFundsPage = forwardRef(({ onBackClick }, ref) => {
     const [type, setType] = useState();
     const [risk, setRisk] = useState("conservative");
     const riskToleranceRef = useRef();
+    const chooseFundsRef = useRef();
 
     const riskTolerances = {
-        conservative: "",
-        "moderate conservative": "",
-        balanced: "",
-        growth: "",
+        conservative:
+            "if you don’t wanna risk your bag and put in some low stake investments then this is the option for you",
+        "moderate conservative":
+            "if youre feeling a bit more spicy then you finna open this account to see higher profit and longterm growth",
+        balanced:
+            "if you wanan make some coin and increase your ur capital long term then this is for you bestie.",
+        growth: "if you want to see your investment potentially go to the moon 🚀 then this is great for long term investments if want low-moderate income.",
         "aggressive growth":
             "you’re not afraid. you’re here for the diamond hands even if theres a high chance you’ll lose money",
     };
@@ -44,8 +48,19 @@ export const MutualFundsPage = forwardRef(({ onBackClick }, ref) => {
                         that! For more information about MERs read here:
                     </p>
                 </div>
+                <button
+                    className="button"
+                    style={{ marginTop: "2rem" }}
+                    onClick={() => {
+                        chooseFundsRef.current.scrollIntoView({
+                            behavior: "smooth",
+                        });
+                    }}
+                >
+                    OK BET
+                </button>
             </section>
-            <section style={{ marginBottom: "7rem" }}>
+            <section style={{ marginBottom: "7rem" }} ref={chooseFundsRef}>
                 <h5 className="big-text-body">Choosing your mutual fund</h5>
                 <p>
                     Theres a lot of mutual funds out there but here are two
@@ -102,10 +117,10 @@ export const MutualFundsPage = forwardRef(({ onBackClick }, ref) => {
                         </h5>
                     ))}
                 </div>
-                <div className="info-container" style={{ marginTop: "4rem" }}>
-                    <p>{riskTolerances[risk]}</p>
+                <div className="info-container">
+                    <p style={{ margin: "2rem" }}>{riskTolerances[risk]}</p>
                     {type && risk && (
-                        <div>
+                        <div className="imagez-container">
                             <p>{`MER: ${mer[type][risk]}`}</p>
                             <img
                                 src={mutualFundImages[type][risk]}

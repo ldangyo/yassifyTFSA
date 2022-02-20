@@ -12,12 +12,15 @@ export const MainPage = () => {
     const [showSavingsSection, setShowSavingsSection] = useState(false);
     const [showTfsaInfoSection, setShowTfsaInfoSection] = useState(false);
     const [showMutualFundsPage, setShowMutualFundsPage] = useState(false);
+    const [showDIYStocksPage, setShowDIYStocksPage] = useState(false);
+    const [showTfsaTypesPage, setShowTfsaTypesSection] = useState(false);
     const [dreamItem, setDreamItem] = useState();
     const [years, setYears] = useState();
     const [amount, setAmount] = useState();
 
     const savingsPageRef = useRef();
     const tfsaInfoRef = useRef();
+    const tfsaTypesRef = useRef();
 
     function handleBackClick() {
         if (showSavingsSection)
@@ -25,12 +28,14 @@ export const MainPage = () => {
     }
 
     const onClickNext = useCallback((type) => {
+        console.log(type);
         switch (type) {
             case "tfsaInfoSection": {
                 setShowTfsaInfoSection(true);
-                tfsaInfoRef.current?.scrollIntoView({
-                    behavior: "smooth",
-                });
+                break;
+            }
+            case "tfsaTypesSection": {
+                setShowTfsaTypesSection(true);
                 break;
             }
             default:
@@ -44,7 +49,7 @@ export const MainPage = () => {
 
     return (
         <div>
-            <div className="container">
+            <div className="container main-background">
                 <section>
                     <h2>Picture This...</h2>
                     <h5 className="big-text-body">
@@ -86,16 +91,18 @@ export const MainPage = () => {
             )}
 
             {showTfsaInfoSection && (
-                <TfsaInfoPage
-                    ref={tfsaInfoRef}
-                    onClickNext={() => onClickNext}
-                />
+                <TfsaInfoPage ref={tfsaInfoRef} onClickNext={onClickNext} />
             )}
 
-            <IndividualPage></IndividualPage>
-            <TfsaTypes></TfsaTypes>
-            {/* {showMutualFundsPage && <MutualFundsPage />} */}
-            <MutualFundsPage ref={tfsaInfoRef} />
+            {showTfsaTypesPage && (
+                <TfsaTypes
+                    ref={tfsaTypesRef}
+                    setShowDIYStocksPage={setShowDIYStocksPage}
+                    showMutuals={setShowMutualFundsPage}
+                />
+            )}
+            {showDIYStocksPage && <IndividualPage ref={tfsaInfoRef} />}
+            {showMutualFundsPage && <MutualFundsPage ref={tfsaInfoRef} />}
         </div>
     );
 };
